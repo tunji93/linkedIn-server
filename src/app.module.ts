@@ -7,6 +7,7 @@ import { ConfigService } from './config/config.service';
 import { TypeOrmNamingStrategy } from './typeorm/typeorm-naming-strategy';
 import { UserModule } from './user/user.module';
 import { FeedModule } from './feed/feed.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { FeedModule } from './feed/feed.module';
     }),
     UserModule,
     FeedModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
