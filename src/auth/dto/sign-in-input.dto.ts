@@ -5,7 +5,6 @@ export class SignInInputDto {
   @IsString()
   email: string;
 
-  @IsAscii()
-  @Min(8)
+  @IsString()
   password: string;
 }

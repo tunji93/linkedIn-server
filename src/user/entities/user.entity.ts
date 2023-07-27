@@ -1,3 +1,4 @@
+import { Exclude } from 'class-transformer';
 import { Feed } from 'src/feed/entities/feed.entity';
 import { Role } from 'src/utils/interfaces/role';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
@@ -13,7 +14,8 @@ export class User {
   @Column()
   lastname: string;
 
-  @Column({ select: false })
+  @Exclude()
+  @Column()
   password: string;
 
   @Column({ unique: true })
